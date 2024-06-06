@@ -1,0 +1,247 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d9bff6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.container {
+  /* background-color: blue; */
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  background-color: #ffe5ff;
+  font-style: normal;
+  font-size: 50px;
+  width: 400px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 60px;
+  text-shadow: 2px black;
+}
+
+.score, h1 {
+  font-family: "Arizonia", cursive;
+  font-weight: bold;
+}
+
+.score { 
+  font-size: 25px;
+}
+
+.input-container {
+  background-color: #ffe5ff;
+  width: 600px;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  border: 3px solid black;
+  border-radius: 60px;
+}
+
+.taskName {
+  width:40vw;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+.containerTask {
+  padding: 30px;
+  background-color: #ffe5ff;
+  min-width: 600px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 60px;
+}
+
+#new-task {
+  font-family: "Arizonia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  background-color: #f2f2f2;
+  width: 450px;
+  height: 40px;
+  border-radius: 7px;
+  text-indent: 10px;
+}
+
+#task-list {
+  background-color: blue;
+  margin: 7px;
+  display: flex;
+  flex-direction: column
+}
+
+.containerButtons {
+  display: flex;
+  width: 150px;
+  justify-content: space-around;
+}
+
+.task {
+  width:600px;
+  height:60px;
+  border: 2px solid black;
+  border-radius: 7px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.updateShow {
+  width: 100%;
+  padding: 3px 10px 3px 10px ;
+  position: relative;
+  font-family: "Arizonia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  background-color: #f2f2f2;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-indent: 10px each-line;
+}
+
+.date {
+  position: absolute;
+  font-size: 13px;
+  bottom: -23px;
+  right:0;
+}
+
+#add-task {
+  font-family: "Arizonia", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  background-color: #cbe8ff;
+  width: 60px;
+  height: 40px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deleteTask {
+  font-family: "Arizonia", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  background-color: #ffcece;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.updateTask {
+  /* position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right: 50px; */
+  font-family: "Arizonia", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  background-color: #ceffce;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.containerTaskUpdate {
+  width: 100%;
+}
+
+
+
+/* Zone effets */
+
+#title-swing {
+  animation: swingWithPause 3s ease-in-out infinite;
+}
+
+#title-flash {
+  animation: flash 0.5s ease-in-out infinite;
+}
+
+@keyframes swingWithPause {
+  10% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  20% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  30% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  40% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes flash {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    opacity: 1;
+  }
+  7.5%,
+  45%,
+  55% {
+    opacity: 0.125;
+  }
+}
+
+#add-task:hover {
+    background-color: #0056b3; /* Change la couleur du bouton au survol */
+}
+
+.deleteTask:hover {
+    background-color: #b30000; /* Change la couleur du bouton au survol */
+}
+
+.updateTask:hover {
+    background-color: #02b41a; /* Change la couleur du bouton au survol */
+}
